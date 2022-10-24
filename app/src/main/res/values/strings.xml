@@ -11,4 +11,7 @@
     <string name="reg_passrules">Password should contain: \n* 8 or more characters \n* Upercase and lowercase characters \n* Numeric characters</string>
     <string name="btnBeginString">Begin</string>
     <string name="btnRegister">Register</string>
+
+    <!--Home activity-->
+    <string name="home_header">Women\'s Health</string>
 </resources>
