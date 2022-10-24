@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">test_wma</string>
+    <string name="activity_main_label">Welcome \nto \nWomen\'s Health </string>
+    <string name="activity_main_label2"> Now let us begin </string>
+    <!--Login String Values-->
+    <string name="login_activity_loginlbl_Text">Login</string>
+    <string name="login_activity_create_account_label">Don\'t have an account ? </string>
+    <string name="login_activity_create_account_textlink">\t\tCreate An Account</string>
+    <!--Registration String Values-->
+    <string name="reg_activity_heading">Register</string>
+    <string name="reg_passrules">Password should contain: \n* 8 or more characters \n* Upercase and lowercase characters \n* Numeric characters</string>
+    <string name="btnBeginString">Begin</string>
+    <string name="btnRegister">Register</string>
+
+    <!--Home activity-->
+    <string name="home_header">Women\'s Health</string>
+</resources>
