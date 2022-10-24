@@ -15,8 +15,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         Button btnLogin = findViewById(R.id.btnLogin);
         TextView createAccount = findViewById(R.id.createAcc_Link);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,12 +26,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        createAccount.setOnClickListener(new View.OnClickListener() {
+        createAccount.setOnClickListener( new View.OnClickListener(){
+
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
+                Intent intent = new Intent(LoginActivity.this,RegistrationActivity.class);
+                startActivity(intent);
             }
-        });
+        } );
 
     }
+
 }
