@@ -6,6 +6,7 @@
     <string name="login_activity_loginlbl_Text">Login</string>
     <string name="login_activity_create_account_label">Don\'t have an account ? </string>
     <string name="login_activity_create_account_textlink">\t\tCreate An Account</string>
+    <string name="home_des">This app is made to keep women informed about their healthy sexual behaviour.</string>
     <!--Registration String Values-->
     <string name="reg_activity_heading">Register</string>
     <string name="reg_passrules">Password should contain: \n* 8 or more characters \n* Upercase and lowercase characters \n* Numeric characters</string>
