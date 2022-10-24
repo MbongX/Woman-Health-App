@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_main_label">Women\'s Health Companion</string>
+    <string name="btnBeginString">Begin</string>
+    <string name="btnRegister">Register</string>
+</resources>
