@@ -11,26 +11,45 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import Interfaces.IssueInterface;
 import models.Issue;
 import testing.one.R;
 
-public class IssuesRecyclerView extends RecyclerView.Adapter<IssuesRecyclerView.MyViewHolder> {
+public class IssuesRecyclerView extends RecyclerView.Adapter<IssuesRecyclerView.MyViewHolder> implements IssueInterface {
     Context context;
     ArrayList<Issue> issues;
 
+    // Issue Interface
+    IssueInterface issueInterface;
+    @Override
+    public void onIssueClick(int position) {
+
+    }
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title,description,rootcause;
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView,IssueInterface issueInterface) {
             super(itemView);
             title = itemView.findViewById(R.id.category_title);
             description = itemView.findViewById(R.id.Description);
             rootcause = itemView.findViewById(R.id.RootCause);
+
+            itemView.setOnClickListener(view -> {
+                if(issueInterface != null){
+                    int pos = getAdapterPosition();
+                    if(pos != RecyclerView.NO_POSITION){
+                        issueInterface.onIssueClick(pos);
+                    }
+                }
+            });
+
         }
     }
     // Constructor
-    public IssuesRecyclerView(Context context, ArrayList<Issue> Issues){
+    public IssuesRecyclerView(Context context, ArrayList<Issue> Issues,IssueInterface issueInterface){
         this.context = context;
         this.issues = Issues;
+        this.issueInterface = issueInterface;
     }
 
     @NonNull
@@ -39,7 +58,7 @@ public class IssuesRecyclerView extends RecyclerView.Adapter<IssuesRecyclerView.
         // Inflate the layout
         LayoutInflater inflater  = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.issue_layout,parent,false);
-        return new IssuesRecyclerView.MyViewHolder(view);
+        return new IssuesRecyclerView.MyViewHolder(view,issueInterface);
     }
 
     @Override
