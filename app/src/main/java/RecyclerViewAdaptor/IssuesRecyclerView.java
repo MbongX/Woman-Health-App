@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import models.Issue;
 import testing.one.R;
@@ -23,7 +22,7 @@ public class IssuesRecyclerView extends RecyclerView.Adapter<IssuesRecyclerView.
         TextView title,description,rootcause;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.title);
+            title = itemView.findViewById(R.id.category_title);
             description = itemView.findViewById(R.id.Description);
             rootcause = itemView.findViewById(R.id.RootCause);
         }

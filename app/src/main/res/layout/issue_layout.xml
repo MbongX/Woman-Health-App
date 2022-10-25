@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/category_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,6 +51,6 @@
         android:text="TextView"
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/category_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
