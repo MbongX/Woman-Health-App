@@ -33,6 +33,7 @@ public final class Data {
 
         Issue i2 = new Issue();
         i2.category = categories.get(0);
+        i2.title = "Fibroids";
         i2.description ="Fibroids are noncancerous tumors in the uterus. Research shows that up to 77 percentTrusted Source of women have fibroids, according to a review published in 2016. However, most women will never need treatment";
         i2.Preventions.addAll( Arrays.asList(".") );
         i2.RootCause = "";
