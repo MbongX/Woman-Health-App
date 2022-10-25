@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,18 +14,20 @@ import android.widget.TextView;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 
+import Interfaces.IssueInterface;
 import RecyclerViewAdaptor.IssuesRecyclerView;
 import data.Data;
 import models.Issue;
 import models.IssueCategory;
 
-public class ListIssuesActivity extends AppCompatActivity {
+public class ListIssuesActivity extends AppCompatActivity implements IssueInterface {
+
+    public static final String ISSUE_TITLE = "testing.one.ISSUE_TITLE";
 
     RecyclerView recyclerView;
-    Button backbtn;
     TextView title;
     Data data = new Data();
-
+    ArrayList<Issue> issues = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,6 @@ public class ListIssuesActivity extends AppCompatActivity {
 
         int id = this.getIntent().getIntExtra(HomeActivity.ISSUE_CATEGORY,0);
         title.setText(t);
-        ArrayList<Issue> issues = new ArrayList<>();
         for(int c =0;c<data.issues.size();c++){
             if(data.categories.get(id).name==data.issues.get(c).category.name){
                 issues.add(data.issues.get(c));
@@ -44,10 +46,17 @@ public class ListIssuesActivity extends AppCompatActivity {
         }
 
         recyclerView = findViewById(R.id.issuesRecyclerView);
-        IssuesRecyclerView issuesRecyclerView = new IssuesRecyclerView(this,issues);
+        IssuesRecyclerView issuesRecyclerView = new IssuesRecyclerView(this,issues,this);
         recyclerView.setAdapter(issuesRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 
+    @Override
+    public void onIssueClick(int position) {
+        Intent intent = new Intent(this,IssueDetails.class);
+        String name = issues.get(position).title;
+        intent.putExtra(ISSUE_TITLE,name);
+        startActivity(intent);
+    }
 }
