@@ -6,11 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import Interfaces.CategoryInterface;
 import RecyclerViewAdaptor.IssueCategoryRecyclerViewAdaptor;
 import RecyclerViewAdaptor.IssuesRecyclerView;
 import data.Data;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements CategoryInterface {
     RecyclerView recyclerView;
     private Data data = new Data();
     @Override
@@ -18,8 +19,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         recyclerView = findViewById(R.id.categoryRecyclerView);
-        IssueCategoryRecyclerViewAdaptor issuesRecyclerView = new IssueCategoryRecyclerViewAdaptor(this,data.categories);
+        IssueCategoryRecyclerViewAdaptor issuesRecyclerView = new IssueCategoryRecyclerViewAdaptor(this,data.categories,this);
         recyclerView.setAdapter(issuesRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public void onCategoryClick(int position) {
+        System.out.println(position);
     }
 }
