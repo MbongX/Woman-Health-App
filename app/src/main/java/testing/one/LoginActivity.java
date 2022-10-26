@@ -6,15 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 //declare my vars
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        EditText username = findViewById(R.id.login_username);
+        EditText password = findViewById(R.id.login_password);
 
         Button btnLogin = findViewById(R.id.btnLogin);
         TextView createAccount = findViewById(R.id.createAcc_Link);
@@ -22,6 +27,17 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               final String string_username = username.getText().toString();
+               final String string_password = password.getText().toString();
+
+               if(string_username.isEmpty() || string_password.isEmpty())
+               {
+                   Toast.makeText(LoginActivity.this, "Please enter your username or password",Toast.LENGTH_SHORT).show();
+               }
+
+
+
+
                 startActivity(new Intent(LoginActivity.this,HomeActivity.class));
             }
         });

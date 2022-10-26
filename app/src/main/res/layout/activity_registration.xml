@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity"
-    android:background="@drawable/bb"
+    android:background="#EC3C5C"
+
     >
 
 
@@ -213,16 +214,19 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
         android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
         android:onClick="register"
         android:text="@string/btnRegister"
         android:textColor="@color/white"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/reg_ReapeatPassword"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/reg_ReapeatPassword"
-        app:layout_constraintTop_toBottomOf="@+id/reg_PassRules" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_PassRules"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
