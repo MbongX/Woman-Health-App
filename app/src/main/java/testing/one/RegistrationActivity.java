@@ -65,8 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
             final String Age =Reg_Age.getText().toString().trim();
             final String Password = Reg_Password.getText().toString().trim();
             final String Repeat_Password = Reg_RepeatPassword.getText().toString().trim();
-            final int ageValue = Integer.valueOf(Age);
-
+            final int ageValue = Age.isEmpty()||Age==""?0:Integer.valueOf(Age);
 
             //checking iff all fields have been filled in
             if(Firstname.isEmpty() || Lastname.isEmpty() || Email.isEmpty() || CellNumber.isEmpty() || Username.isEmpty() || Age.isEmpty() || Password.isEmpty() || Repeat_Password.isEmpty()) {
