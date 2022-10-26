@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -27,13 +28,16 @@ import com.google.firebase.database.ValueEventListener;
 import data.DbRef;
 
 public class LoginActivity extends AppCompatActivity {
-
+    private FirebaseAuth mAuth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mAuth = FirebaseAuth.getInstance();
+
         EditText username = findViewById(R.id.login_username);
         EditText password = findViewById(R.id.login_password);
 
@@ -43,8 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               final String Username = username.getText().toString();
-               final String Password = password.getText().toString();
+               final String Username = username.getText().toString().trim();
+               final String Password = password.getText().toString().trim();
 
                //Checking Connectivity
                 if((isConnected(LoginActivity.this)) == false){
@@ -54,7 +58,14 @@ public class LoginActivity extends AppCompatActivity {
 
                     //DB Validation
                     if (Username.isEmpty() || Password.isEmpty()) {
-                        Toast.makeText(LoginActivity.this, "Please enter your username or password", Toast.LENGTH_SHORT).show();
+                        if(Username.isEmpty()){
+                            username.setError("Username is required");
+                            username.requestFocus();
+                        }
+                        if(Password.isEmpty()){
+                            password.setError("Password is required");
+                            password.requestFocus();
+                        }
                     } else {
                         //try db connection here
                         databaseReference.child(DbName).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -134,14 +145,7 @@ public class LoginActivity extends AppCompatActivity {
         //Mobile Connectivity
         NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 
-        if(wifiConn != null && wifiConn.isConnected() || (mobileConn != null && mobileConn.isConnected()))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return wifiConn != null && wifiConn.isConnected() || (mobileConn != null && mobileConn.isConnected());
     }
 
 }
