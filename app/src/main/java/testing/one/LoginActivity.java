@@ -3,10 +3,6 @@ package testing.one;
 import static data.DbRef.DbName;
 import static data.DbRef.databaseReference;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,18 +13,22 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
-import data.DbRef;
-
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private ImageView BannerIcon;
 
 
     @Override
@@ -37,34 +37,40 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-
+        BannerIcon = findViewById(R.id.loginBannerLogo);
         EditText username = findViewById(R.id.login_username);
         EditText password = findViewById(R.id.login_password);
-
         Button btnLogin = findViewById(R.id.btnLogin);
         TextView createAccount = findViewById(R.id.createAcc_Link);
+
+        BannerIcon.setOnClickListener(View -> {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               final String Username = username.getText().toString().trim();
-               final String Password = password.getText().toString().trim();
+                final String Username = username.getText().toString().trim();
+                final String Password = password.getText().toString().trim();
 
-               //Checking Connectivity
-                if((isConnected(LoginActivity.this)) == false){
+                //Checking Connectivity
+                if ((isConnected(LoginActivity.this)) == false) {
                     showCustomDialog();
-                }else {
+                } else {
 
 
                     //DB Validation
                     if (Username.isEmpty() || Password.isEmpty()) {
-                        if(Username.isEmpty()){
+                        if (Username.isEmpty()) {
                             username.setError("Username is required");
                             username.requestFocus();
+                            return;
                         }
-                        if(Password.isEmpty()){
+                        if (Password.isEmpty()) {
                             password.setError("Password is required");
                             password.requestFocus();
+                            return;
                         }
                     } else {
                         //try db connection here
@@ -108,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         createAccount.setOnClickListener(view -> {
-            Intent intent = new Intent(LoginActivity.this,RegistrationActivity.class);
+            Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
             startActivity(intent);
         });
 
@@ -130,7 +136,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //redirect the user back to the landing screen
-                        startActivity(new Intent (getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();
                     }
                 });
