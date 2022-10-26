@@ -17,17 +17,20 @@ public class HomeActivity extends AppCompatActivity implements CategoryInterface
     public static final String ISSUE_CATEGORY = "testing.one.ISSUE_CATEGORY";
     RecyclerView recyclerView;
     private final Data data = new Data();
+    private ImageView LogoutIcon;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        ImageView LogoutIcon = findViewById(R.id.icon_logout);
+        LogoutIcon = findViewById(R.id.icon_logout);
         recyclerView = findViewById(R.id.categoryRecyclerView);
         IssueCategoryRecyclerViewAdaptor issuesRecyclerView = new IssueCategoryRecyclerViewAdaptor(this,data.categories,this);
         recyclerView.setAdapter(issuesRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         LogoutIcon.setOnClickListener(View -> {
             Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
+            startActivity(intent);
         });
     }
 
