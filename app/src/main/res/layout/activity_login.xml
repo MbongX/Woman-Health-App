@@ -10,7 +10,7 @@
 
 
     <ImageView
-        android:id="@+id/loginLogo"
+        android:id="@+id/loginBannerLogo"
         android:layout_width="96dp"
         android:layout_height="147dp"
         android:layout_marginTop="40dp"
@@ -89,10 +89,10 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="@+id/loginLogo"
+        app:layout_constraintEnd_toEndOf="@+id/loginBannerLogo"
         app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/loginLogo"
-        app:layout_constraintTop_toBottomOf="@+id/loginLogo" />
+        app:layout_constraintStart_toStartOf="@+id/loginBannerLogo"
+        app:layout_constraintTop_toBottomOf="@+id/loginBannerLogo" />
 
     <LinearLayout
         android:layout_width="0dp"
