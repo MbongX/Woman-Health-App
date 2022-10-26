@@ -4,10 +4,16 @@ import static data.DbRef.DbName;
 import static data.DbRef.databaseReference;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,49 +46,50 @@ public class LoginActivity extends AppCompatActivity {
                final String Username = username.getText().toString();
                final String Password = password.getText().toString();
 
+               //Checking Connectivity
+                if((isConnected(LoginActivity.this)) == false){
+                    showCustomDialog();
+                }else {
 
-               if(Username.isEmpty() || Password.isEmpty())
-               {
-                   Toast.makeText(LoginActivity.this, "Please enter your username or password",Toast.LENGTH_SHORT).show();
-               }else{
-                   //try db connection here
-                    databaseReference.child(DbName).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            //check if username exists
-                            if(snapshot.hasChild(Username))
-                            {
-                                //get password of user and match it with the one entered
-                                String get_password = snapshot.child(Username).child("password").getValue(String.class);
-                                if (get_password.equals(Password))
-                                {
 
-                                    Toast.makeText(LoginActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
+                    //DB Validation
+                    if (Username.isEmpty() || Password.isEmpty()) {
+                        Toast.makeText(LoginActivity.this, "Please enter your username or password", Toast.LENGTH_SHORT).show();
+                    } else {
+                        //try db connection here
+                        databaseReference.child(DbName).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                //check if username exists
+                                if (snapshot.hasChild(Username)) {
+                                    //get password of user and match it with the one entered
+                                    String get_password = snapshot.child(Username).child("Password").getValue(String.class);
+                                    if (get_password.contains(Password)) {
 
-                                    Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
-                                    startActivity(intent);
+                                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                        startActivity(intent);
 
-                                    finish();
+
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "Wrong Password", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "Wrong Password//Username", Toast.LENGTH_SHORT).show();
                                 }
-                                else{
-                                    Toast.makeText(LoginActivity.this,"Wrong Password",Toast.LENGTH_SHORT).show();
-                                }
-                            }else{
-                                Toast.makeText(LoginActivity.this,"Wrong Password//Username",Toast.LENGTH_SHORT).show();
                             }
-                        }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
 
-                        }
-                    });
-
+                            }
+                        });
 
 
-               }
+                    }
 
-
+                }
 
 
                 //startActivity(new Intent(LoginActivity.this,HomeActivity.class));
@@ -94,6 +101,47 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+    }
+
+    private void showCustomDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        builder.setMessage("Please connect to the internet to proceed further")
+                .setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //redirecting the user to setting->WiFi
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //redirect the user back to the landing screen
+                        startActivity(new Intent (getApplicationContext(),MainActivity.class));
+                        finish();
+                    }
+                });
+
+    }
+
+    private boolean isConnected(LoginActivity login) {
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) login.getSystemService(Context.CONNECTIVITY_SERVICE);
+        //wifi connection -> getting the current status
+        NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        //Mobile Connectivity
+        NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if(wifiConn != null && wifiConn.isConnected() || (mobileConn != null && mobileConn.isConnected()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }
