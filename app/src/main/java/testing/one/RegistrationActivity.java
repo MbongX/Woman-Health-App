@@ -19,13 +19,16 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         Register = findViewById(R.id.btnRegister);
-        Register.setOnClickListener( view -> {
-
-        } );
+        Register.setOnClickListener(this::onClick);
     }
+
 
     private void register(){
-        System.out.println("Registered");
+        Intent intent = new Intent(RegistrationActivity.this,LoginActivity.class);
+        startActivity(intent);
     }
 
+    private void onClick(View view) {
+        register();
+    }
 }

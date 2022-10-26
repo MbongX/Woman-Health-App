@@ -17,23 +17,25 @@ public final class Data {
     }
 
     private void setIssueCategories(){
-        categories.add( new IssueCategory(1,"Menstruation and reproductive health") );
-        categories.add( new IssueCategory(2,"Sexual relationships and libido") );
+        categories.add( new IssueCategory(1,"Understanding STI's") );
+        categories.add( new IssueCategory(2,"Practice safer sex") );
+        categories.add( new IssueCategory(3,"Menstruation and reproductive health"));
+        categories.add( new IssueCategory(4,"Sexual relationships and libido") );
     }
 
-    private void setIssues(){
+    private void setIssues(){ //here comes trouble
         Issue i1 = new Issue();
         i1.category = categories.get(0);
-        i1.description ="Endometriosis is a painful condition in which tissue similar to the lining of the uterus grows outside the uterus.The uterus lining is called the endometrium. It’s the source of blood and tissue during menstruation. It’s also needed to nourish a growing fetus.";
-        i1.title = "Endometriosis";
-        i1.RootCause= "";
-        i1.Preventions.add(".");
-        i1.Symptoms.addAll(Arrays.asList("severe menstrual pain","pain during sex","pain during bowel movements","heavy bleeding","bleeding between periods"));
-        i1.EmergencyPreventions.addAll(Arrays.asList("hormone therapy","anti-inflammatory medications","surgery to remove the excess tissue","hysterectomy (removal of the uterus)"));
+        i1.description ="Sexually Transmitted Infections";
+        i1.title = "What are STI's";
+        i1.RootCause= "unprotected sex(vaginal,anal and oral sex),engaging with multiple sexual patners";
+        i1.Preventions.add("Practice safer sex by using external condoms, internal condoms, dental condoms nd gloves");
+        i1.Symptoms.addAll(Arrays.asList("Unusual discharge from the penis or vagina","Sores or warts on the genital area","Painful or frequent urination","Itching and redness in the genital area","Blisters or sores in or around the mouth","Abnormal vaginal odor","Anal itching, soreness, or bleeding","Abdominal pain","Fever"));
+        i1.EmergencyPreventions.addAll(Arrays.asList("delaying sexual activity (for adolescents)","decreasing the number of sex partners","using condoms correctly and consistently"));
 
         Issue i2 = new Issue();
         i2.category = categories.get(0);
-        i2.title = "Fibroids";
+        i2.title = "";
         i2.description ="Fibroids are noncancerous tumors in the uterus. Research shows that up to 77 percentTrusted Source of women have fibroids, according to a review published in 2016. However, most women will never need treatment";
         i2.Preventions.addAll( Arrays.asList(".") );
         i2.RootCause = "";

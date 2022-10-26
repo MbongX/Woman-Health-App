@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">test_wma</string>
+    <string name="app_name">Women\'s Health </string>
     <string name="activity_main_label">Welcome \nto \nWomen\'s Health </string>
     <string name="activity_main_label2"> Now let us begin </string>
     <!--Login String Values-->
