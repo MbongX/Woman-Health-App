@@ -34,7 +34,7 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
         setContentView(R.layout.activity_list_issues);
 
         //Set Activity Title textView
-        title = (TextView) findViewById(R.id.issueListTitle);
+        title = findViewById(R.id.issueListTitle);
         String t = this.getIntent().getStringExtra(HomeActivity.ISSUE_LIST_TITLE);
 
         int id = this.getIntent().getIntExtra(HomeActivity.ISSUE_CATEGORY,0);

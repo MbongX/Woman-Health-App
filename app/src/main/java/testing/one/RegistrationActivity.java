@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,74 +27,137 @@ import com.google.firebase.database.ValueEventListener;
 import data.DbRef;
 
 public class RegistrationActivity extends AppCompatActivity {
-
-
-
+     private FirebaseAuth mAuth;
+     private EditText Reg_Firstname,Reg_Lastname,Reg_Email,Reg_CellNumber,Reg_Username,Reg_Age,Reg_Password,Reg_RepeatPassword;
+     private Button Register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        EditText Reg_Firstname = findViewById(R.id.reg_Firstname);
-        EditText Reg_Lastname = findViewById(R.id.reg_Lastname);
-        EditText Reg_Email = findViewById(R.id.email);
-        EditText Reg_CellNumber = findViewById(R.id.reg_Cellphone);
-        EditText Reg_Username = findViewById(R.id.reg_username);
-        EditText Reg_Age = findViewById(R.id.reg_Age);
-        EditText Reg_Password = findViewById(R.id.reg_Password);
-        EditText Reg_Reapeat_Password = findViewById(R.id.reg_ReapeatPassword);
+         Reg_Firstname = findViewById(R.id.reg_Firstname);
+         Reg_Lastname = findViewById(R.id.reg_Lastname);
+         Reg_Email = findViewById(R.id.email);
+         Reg_CellNumber = findViewById(R.id.reg_Cellphone);
+         Reg_Username = findViewById(R.id.reg_username);
+         Reg_Age = findViewById(R.id.reg_Age);
+         Reg_Password = findViewById(R.id.reg_Password);
+         Reg_RepeatPassword = findViewById(R.id.reg_ReapeatPassword);
         TextView Reg_ErrorMessages = findViewById(R.id.reg_errors);
-        Button Register= findViewById(R.id.btnRegister);
+        Register= findViewById(R.id.btnRegister);
 
 
         Register.setOnClickListener( view -> {
             //extracting the data from the textboxes into string variables
-            final String Firstname = Reg_Firstname.getText().toString();
-            final String Lastname = Reg_Lastname.getText().toString();
-            final String Email = Reg_Email.getText().toString();
-            final String CellNumber = Reg_CellNumber.getText().toString();
-            final String Username = Reg_Username.getText().toString();
-            final String Age =Reg_Age.getText().toString();
-            final String Password = Reg_Password.getText().toString();
-            final String Repeat_Password = Reg_Reapeat_Password.getText().toString();
+            final String Firstname = Reg_Firstname.getText().toString().trim();
+            final String Lastname = Reg_Lastname.getText().toString().trim();
+            final String Email = Reg_Email.getText().toString().trim();
+            final String CellNumber = Reg_CellNumber.getText().toString().trim();
+            final String Username = Reg_Username.getText().toString().trim();
+            final String Age =Reg_Age.getText().toString().trim();
+            final String Password = Reg_Password.getText().toString().trim();
+            final String Repeat_Password = Reg_RepeatPassword.getText().toString().trim();
             final int ageValue = Integer.valueOf(Age);
 
 
             //checking iff all fields have been filled in
             if(Firstname.isEmpty()&&Lastname.isEmpty()&&Email.isEmpty()&&CellNumber.isEmpty()&&Username.isEmpty()&&Age.isEmpty()&&Password.isEmpty()&&Repeat_Password.isEmpty())
             {
-                Reg_ErrorMessages.append("Please fill in all the fields");
-               Toast.makeText(RegistrationActivity.this,"Please fill in all the fields",Toast.LENGTH_SHORT).show();
+                if(Firstname.isEmpty()){
+                    Reg_Firstname.setError("Firstname is required");
+                    Reg_Firstname.requestFocus();
+                    return;
+                }
+               else if(Lastname.isEmpty())
+                {
+                    Reg_Lastname.setError("Lastname is required");
+                    Reg_Lastname.requestFocus();
+                    return;
+                }
+                else if(Email.isEmpty())
+                {
+                    Reg_Email.setError("Email is required");
+                    Reg_Email.requestFocus();
+                    return;
+                }
+                else if(CellNumber.isEmpty())
+                {
+                    Reg_CellNumber.setError("Cellnumber is required");
+                    Reg_CellNumber.requestFocus();
+                    return;
+                }
+                else if(Username.isEmpty())
+                {
+                    Reg_Username.setError("Username is required");
+                    Reg_Username.requestFocus();
+                    return;
+                }
+                else if(Age.isEmpty())
+                {
+                    Reg_Age.setError("Age is required");
+                    Reg_Age.requestFocus();
+                    return;
+                }
+                else if(Password.isEmpty())
+                {
+                    Reg_Password.setError("Password is required");
+                    Reg_Password.requestFocus();
+                    return;
+                }
+                else if(Repeat_Password.isEmpty())
+                {
+                    Reg_RepeatPassword.setError("Repeat Password is required");
+                    Reg_RepeatPassword.requestFocus();
+                    return;
+                }
+                //Reg_ErrorMessages.append("Please fill in all the fields");
+               //Toast.makeText(RegistrationActivity.this,"Please fill in all the fields",Toast.LENGTH_SHORT).show();
             }
 
             //validating email
 
-             else if (!Email.contains("@") && Email.contains(".")) {
-                    Reg_ErrorMessages.append("\nEmail is invalid; email should contain \"@\" & \".\"");
+             else if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+
+                 Reg_Email.setError("Email format is invalid");
+                 Reg_Email.requestFocus();
+                 Reg_ErrorMessages.append("\nEmail format is invalid");
+                 return;
+
                     //Toast.makeText(RegistrationActivity.this,"Invalid email",Toast.LENGTH_SHORT).show();
                 }
 
             //validating phone number
 
             else if (CellNumber.length() != 10) {
-                    Reg_ErrorMessages.append("\nCell number must be 10 digits");
-                    //Toast.makeText(RegistrationActivity.this,"Cell number must have 10 digits",Toast.LENGTH_SHORT).show();
+                Reg_CellNumber.setError("Cell number must be 10 digits long");
+                Reg_CellNumber.requestFocus();
+                Reg_ErrorMessages.append("\nCell number must be 10 digits");
+                //Toast.makeText(RegistrationActivity.this,"Cell number must have 10 digits",Toast.LENGTH_SHORT).show();
                 }
 
 
             else if (ageValue > 100) {
-                    Reg_ErrorMessages.append("\nAge must be less than 100");
-                    //Toast.makeText(RegistrationActivity.this,"Age cannot be greater than 100",Toast.LENGTH_SHORT).show();
+                Reg_Age.setError("Age must not be greater than 100");
+                Reg_Age.requestFocus();
+                Reg_ErrorMessages.append("\nAge must be less than 100");
+                //Toast.makeText(RegistrationActivity.this,"Age cannot be greater than 100",Toast.LENGTH_SHORT).show();
                 }
 
 
            else if (!Password.equals(Repeat_Password)) {
-                    Reg_ErrorMessages.append("\nPasswords do not match");
-                    //Toast.makeText(RegistrationActivity.this,"Passwords do not match",Toast.LENGTH_SHORT).show();
+                Reg_Password.setError("Passwords do not match");
+                Reg_Password.requestFocus();
+                Reg_RepeatPassword.requestFocus();
+
+               Reg_ErrorMessages.append("\nPasswords do not match");
+               //Toast.makeText(RegistrationActivity.this,"Passwords do not match",Toast.LENGTH_SHORT).show();
                 }
                 else if ((Password.equals(Repeat_Password)) && Password.length() < 8) {
-                    Reg_ErrorMessages.append("\nPassword must be greater than 8 characters");
-                    //Toast.makeText(RegistrationActivity.this,"Password cannot be less than 8 characters",Toast.LENGTH_SHORT).show();
+                Reg_Password.setError("Password must be more han 8 characters in length");
+                Reg_Password.requestFocus();
+                Reg_RepeatPassword.requestFocus();
+                Reg_ErrorMessages.append("\nPassword must be greater than 8 characters");
+                //Toast.makeText(RegistrationActivity.this,"Password cannot be less than 8 characters",Toast.LENGTH_SHORT).show();
                 }
                 //Toast.makeText(RegistrationActivity.this,Reg_ErrorMessages.getText().toString(),Toast.LENGTH_SHORT).show();
 

@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity implements CategoryInterface
     public static final String ISSUE_LIST_TITLE = "testing.one.ISSUE_LIST_TITLE";
     public static final String ISSUE_CATEGORY = "testing.one.ISSUE_CATEGORY";
     RecyclerView recyclerView;
-    private Data data = new Data();
+    private final Data data = new Data();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity implements CategoryInterface
     @Override
     public void onCategoryClick(int position) {
         Intent intent = new Intent(this,ListIssuesActivity.class);
-        intent.putExtra(ISSUE_LIST_TITLE,this.data.categories.get(position).name.toString());
+        intent.putExtra(ISSUE_LIST_TITLE, this.data.categories.get(position).name);
         intent.putExtra(ISSUE_CATEGORY,position);
         startActivity(intent);
     }
