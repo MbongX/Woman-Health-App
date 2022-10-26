@@ -25,7 +25,7 @@
         android:id="@+id/registration_label"
         android:layout_width="375dp"
         android:layout_height="58dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
         android:text="@string/reg_activity_heading"
@@ -194,27 +194,12 @@
         app:layout_constraintStart_toStartOf="@+id/reg_Password"
         app:layout_constraintTop_toBottomOf="@+id/reg_Password" />
 
-    <TextView
-        android:id="@+id/reg_PassRules"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/comfortaa_bold"
-        android:gravity="center_vertical"
-        android:text="@string/reg_passrules"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/reg_ReapeatPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/reg_ReapeatPassword"
-        app:layout_constraintTop_toBottomOf="@+id/reg_ReapeatPassword" />
-
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
         android:background="@drawable/btn_bg"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
         android:onClick="register"
@@ -222,11 +207,27 @@
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/reg_errors"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/reg_errors"
+        app:layout_constraintTop_toBottomOf="@+id/reg_errors"
+        app:layout_constraintVertical_bias="0.34" />
+
+    <TextView
+        android:id="@+id/reg_errors"
+        android:layout_width="311dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/reg_ReapeatPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/reg_ReapeatPassword"
-        app:layout_constraintTop_toBottomOf="@+id/reg_PassRules"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_ReapeatPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
