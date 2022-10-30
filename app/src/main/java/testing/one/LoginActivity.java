@@ -139,8 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();
                     }
-                });
-
+                }).show();
     }
 
     private boolean isConnected(LoginActivity login) {
