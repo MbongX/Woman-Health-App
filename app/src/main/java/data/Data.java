@@ -17,25 +17,52 @@ public final class Data {
     }
 
     private void setIssueCategories(){
-        categories.add( new IssueCategory(1,"Understanding STI's") );
-        categories.add( new IssueCategory(2,"Practice safer sex") );
-        categories.add( new IssueCategory(3,"Menstruation and reproductive health"));
-        categories.add( new IssueCategory(4,"Sexual relationships and libido") );
+        categories.add( new IssueCategory(1,"Take care") );
+        categories.add( new IssueCategory(2,"Preventing") );
+        categories.add( new IssueCategory(3,"Emergency preventions"));
+        categories.add( new IssueCategory(4,"Consequences") );
     }
 
-    private void setIssues(){ //here comes trouble
+    private void setIssues(){ //Sample Data => Will show on the last activity
         Issue i1 = new Issue();
         i1.category = categories.get(0);
-        i1.description ="Sexually Transmitted Infections";
-        i1.title = "What are STI's";
-        i1.RootCause= "unprotected sex(vaginal,anal and oral sex),engaging with multiple sexual patners";
-        i1.Preventions.add("Practice safer sex by using external condoms, internal condoms, dental condoms nd gloves");
-        i1.Symptoms.addAll(Arrays.asList("Unusual discharge from the penis or vagina","Sores or warts on the genital area","Painful or frequent urination","Itching and redness in the genital area","Blisters or sores in or around the mouth","Abnormal vaginal odor","Anal itching, soreness, or bleeding","Abdominal pain","Fever"));
-        i1.EmergencyPreventions.addAll(Arrays.asList("delaying sexual activity (for adolescents)","decreasing the number of sex partners","using condoms correctly and consistently"));
+        i1.description ="Ways to manage your sex health \nSafer sex practices often involve using barriers in your body to help prevent you and your partner from sharing bodily fluids\n";
+        i1.title = "Practice Safe Sex";
+        i1.RootCause= "";
+        i1.Preventions.add(
+                "barrier methods include condoms, " +
+                        "\n\tInternal condoms, " +
+                        "\n\tDental condoms and gloves" +
+                        "\n\nThese methods have been shown to be effective at preventing STIs, Which are transmitted through bodily fluids such as: " +
+                        "\n\tSemen" +
+                        "\n\tBlood" +
+                        "\n\tVaginal Secretions" +
+                        "\n\tSaliva" +
+                        "\n\n\nBarrier methods can help protect you and your partner from such STIs wuch as:" +
+                        "\n\tHIV" +
+                        "\n\tGonorrhea" +
+                        "\n\tTrichomoniasis" +
+                        "\n\tHepatitis A, B, and C" +
+                        "\n\nBarrier methods are less effective at preventing STIs that are transmitted through skin-to-skin contact,but they can still help reduce your risk" +
+                        "\nExamples of STIs transmitted via skin-to-skin contact include:" +
+                        "\n\tSyphilis" +
+                        "\n\tHPV (Human Papilloma Virus)" +
+                        "\n\tHSV (Human Simplex Virus)" +
+                        "\nPubic lice can passed from one person to another through this method." +
+                        "\nWhen Selecting barrier methods,opt for latex or polyurethane condoms and dental dams. And always use them during any kind of sexual contact or penetration to protect you and your partner." +
+                        "\n\nUsing condoms, dental dams, and gloves can help reduce the transmission of STIs during:" +
+                        "\n\n\tSyphilis" +
+                        "\n\n\tHPV" +
+                        "\n\n\tHerpes" +
+                        "\n\n\tGonorrhea" +
+                        "\n\n\tChlamydia"
+        );
+        i1.Symptoms.addAll(Arrays.asList(""));
+        i1.EmergencyPreventions.addAll(Arrays.asList(""));
 
         Issue i2 = new Issue();
         i2.category = categories.get(0);
-        i2.title = "";
+        i2.title = "Menstruation and Reproduction Health";
         i2.description ="Fibroids are noncancerous tumors in the uterus. Research shows that up to 77 percentTrusted Source of women have fibroids, according to a review published in 2016. However, most women will never need treatment";
         i2.Preventions.addAll( Arrays.asList(".") );
         i2.RootCause = "";
@@ -76,6 +103,10 @@ public final class Data {
         i6.EmergencyPreventions.addAll( Arrays.asList(""));
         i6.Symptoms.addAll( Arrays.asList(""));
         i6.Preventions.addAll( Arrays.asList("Read books about sex and pleasure.","Learn about your body and how it works.","Try sensual nonsexual activities such as massage.","Reduce sources of stress in your life.","Try sexual toys."));
+
+        
+
+
 
         this.issues.add(i1);
         this.issues.add(i2);
