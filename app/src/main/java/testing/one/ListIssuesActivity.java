@@ -23,6 +23,7 @@ import models.IssueCategory;
 public class ListIssuesActivity extends AppCompatActivity implements IssueInterface {
 
     public static final String ISSUE_TITLE = "testing.one.ISSUE_TITLE";
+    int id;
 
     RecyclerView recyclerView;
     TextView title;
@@ -37,7 +38,7 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
         title = findViewById(R.id.issueListTitle);
         String t = this.getIntent().getStringExtra(HomeActivity.ISSUE_LIST_TITLE);
 
-        int id = this.getIntent().getIntExtra(HomeActivity.ISSUE_CATEGORY,0);
+        id = this.getIntent().getIntExtra(HomeActivity.ISSUE_CATEGORY,0);
         title.setText(t);
         for(int c =0;c<data.issues.size();c++){
             if(data.categories.get(id).name==data.issues.get(c).category.name){
@@ -57,6 +58,8 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
         Intent intent = new Intent(this,IssueDetails.class);
         String name = issues.get(position).title;
         intent.putExtra(ISSUE_TITLE,name);
+        intent.putExtra("index",id);
+
         //intent.putExtra("issueT", String.valueOf(title));
         startActivity(intent);
     }
