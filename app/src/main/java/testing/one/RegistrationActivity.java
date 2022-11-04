@@ -20,6 +20,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,6 +33,8 @@ public class RegistrationActivity extends AppCompatActivity {
      private EditText Reg_Firstname,Reg_Lastname,Reg_Email,Reg_CellNumber,Reg_Username,Reg_Age,Reg_Password,Reg_RepeatPassword;
      private Button Register;
      private ImageView BannerLogo;
+
+     FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,6 +191,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
 
+
                         }
 
                         @Override
@@ -194,7 +200,16 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     });
 
-
+                    auth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isComplete()) {
+                                Toast.makeText(RegistrationActivity.this, "New User authenticated Successfully.", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(RegistrationActivity.this, "New User authentication Failed.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 }
             }
 

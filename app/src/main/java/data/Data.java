@@ -30,7 +30,8 @@ public final class Data {
         i1.title = "Practice Safe Sex";
         i1.RootCause= "";
         i1.Preventions.add(
-                "barrier methods include condoms, " +
+                "Barrier methods include: " +
+                        "\n\tCondoms, " +
                         "\n\tInternal condoms, " +
                         "\n\tDental condoms and gloves" +
                         "\n\nThese methods have been shown to be effective at preventing STIs, Which are transmitted through bodily fluids such as: " +
@@ -63,7 +64,8 @@ public final class Data {
         Issue i2 = new Issue();
         i2.category = categories.get(0);
         i2.title = "Menstruation and Reproduction Health";
-        i2.description ="Women often assume that pelvic pain, like cramping, is normal. They’ve been told that menstruation is supposed to hurt. Therefore, they may not discuss their discomfort with their doctor." +
+        i2.description =
+                "Women often assume that pelvic pain, like cramping, is normal. They’ve been told that menstruation is supposed to hurt. Therefore, they may not discuss their discomfort with their doctor." +
                 "\nWomen often assume that pelvic pain, like cramping, is normal. They’ve been told that menstruation is supposed to hurt. Therefore, they may not discuss their discomfort with their doctor." +
                 "\n\nEndometriosis" +
                 "\nEndometriosis is a painful condition in which tissue similar to the lining of the uterus grows outside the uterus." +
