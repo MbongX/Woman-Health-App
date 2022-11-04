@@ -57,6 +57,7 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
         Intent intent = new Intent(this,IssueDetails.class);
         String name = issues.get(position).title;
         intent.putExtra(ISSUE_TITLE,name);
+        //intent.putExtra("issueT", String.valueOf(title));
         startActivity(intent);
     }
 }
