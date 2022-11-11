@@ -27,66 +27,68 @@
 
     <!--Data stores for last activity-->
     <string name="Practice_Safe_Sex_Paragraph">
-<b><i>Safer sex practices</i></b> often involve using barriers in your body to help prevent you and your partner from sharing bodily fluids. Some of these barrier methods include:
-    <ul>
-        <li>external condoms</li>
-        <li>internal condoms</li>
-        <li>dental dams</li>
-        <li>gloves</li>
-    </ul>
+        <b><i>Safer sex practices</i></b> often involve <a href="http://mbongxd.jetbrains.space/">using</a> barriers in your body to help prevent you and your partner from sharing bodily fluids. Some of these barrier methods include:
+<ul>
+<li>external condoms</li>
+<li>internal condoms</li>
+<li>dental dams</li>
+<li>gloves</li>
+</ul>
 \n
-These methods have been shown to be <i><b>effective at preventing STIs,</b></i>> which are transmitted through bodily fluids such as:\n
-    <ul>
-        <li>semen</li>
-        <li>blood</li>
-        <li>vaginal secretions</li>
-        <li>saliva</li>
-    </ul>
+These methods have been shown to be <i><b>effective at preventing STIs,</b></i> which are transmitted through bodily fluids such as:\n
+<ul>
+<li>semen</li>
+<li>blood</li>
+<li>vaginal secretions</li>
+<li>saliva</li>
+</ul>
     \n
 <b>Barrier methods</b> can help protect you and your partner from STIs such as:
     \n
-    <ul>
-        <li>HIV</li>
-        <li>gonorrhea</li>
-        <li>chlamydia</li>
-        <li>trichomoniasis</li>
-        <li>hepatitis A, B, and C</li>
-    </ul>
-    \n
+<ul>
+<li>HIV</li>
+<li>gonorrhea</li>
+<li>chlamydia</li>
+<li>trichomoniasis</li>
+<li>hepatitis A, B, and C</li>
+</ul>
+\n
 <l>Barrier methods are less effective at preventing STIs that are transmitted through skin-to-skin contact, but they can still help reduce your risk.</l>
 Examples of <b><i>STIs transmitted via skin-to-skin contact include:</i></b>
-    \n
-    <ul>
-        <li>syphilis</li>
-        <li>HPV (human papilloma virus)</li>
-        <li>HSV (herpes simplex virus)</li>
-        <li>Pubic lice can also be passed from one person to another through this method.</li>
-    </ul>
-    \n
+\n
+<ul>
+<li>syphilis</li>
+<li>HPV (human papilloma virus)</li>
+<li>HSV (herpes simplex virus)</li>
+<li>Pubic lice can also be passed from one person to another through this method.</li>
+</ul>
+\n
 When selecting barrier methods, opt for <i>latex or polyurethane condoms and dental dams.</i> And always use them during <b>any kind of sexual contact or penetration</b> to protect you and your partner.
 Using condoms, dental dams, and gloves can help reduce the transmission of STIs during:\n
-    <ul>
-        <li>oral sex</li>
-        <li>vaginal sex</li>
-        <li>anal sex</li>
-    </ul>
-    \n
-It’s important to note that some STIs can be transmitted during oral sex, including:\n
-    <ul>
-        <li>syphilis</li>
-        <li>HPV</li>
-        <li>herpes</li>
-        <li>gonorrhea</li>
-        <li>chlamydia</li>
-    </ul>
-    \n</string>
-    <string name = "Prevent_HIV_with_PrEP"><b>PrEP</b>, or pre-exposure prophylaxis, is a prescription medication that’s designed to help prevent contracting HIV during sex without a barrier method or when sharing needles. It’s taken before possible HIV exposure.
+<ul>
+<li>oral sex</li>
+<li>vaginal sex</li>
+<li>anal sex</li>
+</ul>
 \n
-The most common PrEP pills are available under the brand names <u><strong><i><a href = "https://www.healthline.com/health-news/cost-of-hiv-prevention-drug-discouraging-people-from-doing-prep-therapy">Truvada</a></i></strong></u> and <u><strong><i><a href="https://www.healthline.com/health-news/what-to-know-about-fda-approved-second-prep-drug-for-hiv-prevention">Descovy</a></i></strong></u>.
+It’s important to note that some STIs can be transmitted during oral sex, including:\n
+<ul>
+<li>syphilis</li>
+<li>HPV</li>
+<li>herpes</li>
+<li>gonorrhea</li>
+<li>chlamydia</li>
+</ul>
+</string>
+
+
+    <string name ="Prep"><b>PrEP</b>, or Pre-exposure Prophylaxis, is a prescription medication that\'s designed to help prevent contracting HIV during sex without a barrier method or when sharing needles. It s taken before possible HIV exposure.
+\n
+The most common PrEP pills are available under the brand names <u><b><i><a href = "https://www.healthline.com/health-news/cost-of-hiv-prevention-drug-discouraging-people-from-doing-prep-therapy">Truvada</a></i></b></u> and <u><b><i><a href="https://www.healthline.com/health-news/what-to-know-about-fda-approved-second-prep-drug-for-hiv-prevention">Descovy</a></i></b></u>.
 \n
 PrEP has side effects, but they usually go away over time. They can include:
 \n
-<ul type = "-">
+<ul>
 <li>headache</li>
 <li>diarrhea</li>
 <li>nausea</li>
@@ -94,16 +96,16 @@ PrEP has side effects, but they usually go away over time. They can include:
 <li>stomach pain</li>
 </ul>
 \n
-<strong>Talk with your doctor about whether PrEP may be a good option for you, especially if:</strong>
+<b>Talk with your doctor about whether PrEP may be a good option for you, especially if:</b>
 \n
 <ol>
 <li>you plan to have sex without a condom with a partner who has HIV or another STI</li>
 <li>you or your sexual partner share needles</li>
-<li>your sexual partner generally doesn't use barrier methods during sex with you or other partners</li>
+<li>your sexual partner generally doesn\'t use barrier methods during sex with you or other partners</li>
 <li>your sexual partner is a penis owner and has sex with other penis owners</li>
 </ol>
 \n
-<strong>Preventive vaccines</strong>
+<b>Preventive vaccines</b>
 
 <l><u>Currently, there are three STI vaccines available:</u></l>
 \n
@@ -115,26 +117,27 @@ PrEP has side effects, but they usually go away over time. They can include:
 \n
 The three current HPV vaccines approved by the Food and Drug Administration (FDA) are:
 \n
-Cervarix protects against the two strains of HPV that cause most cases of cervical cancer.
-Gardasil protects against those two strains, as well as the two strains that cause the majority of genital warts.
-Gardasil 9 covers the same four HPV strains as Gardasil but includes an additional five “high risk” strains, which is nine strains in total.
+Cervarix protects against the two strains of HPV that cause most cases of cervical cancer. \n
+Gardasil protects against those two strains, as well as the two strains that cause the majority of genital warts. \n
+Gardasil 9 covers the same four HPV strains as Gardasil but includes an additional five "high risk" strains, which is nine strains in total.   \n
 Health insurance generally covers the cost of the vaccines for people up to age 26 years.\n
 The hepatitis B vaccine is normally given during infancy. Hepatitis B causes liver disease. It can be transmitted through sexual activity without a barrier method as well as through blood or blood products.\n
 Hepatitis A is not usually passed from person to person during sex, but it can be transmitted during oral-anal contact.\n
 <i>The hepatitis A vaccine is recommended for all children ages 1 year and older.</i>
     </string>
+
     <string name="Get_Screened_for_stis">
 Screening can help reduce the risk of contracting an STI.\n
 Regular STI testing can help reduce the long-term effects of an infection.\n
 Left untreated, bacterial STIs such as gonorrhea and chlamydia can have serious negative effects on your health, including infertility.\n
-<strong>Screening can help prevent these complications.</strong>
+<b>Screening can help prevent these complications.</b>
 \n
-Make a date with a new partner to get tested before starting a sexual relationship. That way, you’ll each know if you’re putting each other at risk, and treatment can be given if appropriate.
+Make a date with a new partner to get tested before starting a sexual relationship. That way, you\'ll each know if you\’re putting each other at risk, and treatment can be given if appropriate.
 <b>Note:</b>\n
-<b><u>STI screening is recommended for anyone who’s sexually active.</u></b> STIs can affect individuals of any age or relationship status.
+<b><u>STI screening is recommended for anyone who\’s sexually active.</u></b> STIs can affect individuals of any age or relationship status.
     </string>
-<string name = "Get_Regular_Pap_smears">
-    <a href = "https://www.healthline.com/health/pap-smear">Pap smears</a> are a routine part of women’s healthcare to check for cervical cancer and are recommended starting at age 21 years.\n
+    <string name = "Get_Regular_Pap_smears">
+    <a href = "https://www.healthline.com/health/pap-smear">Pap smears</a> are a routine part of women\’s healthcare to check for cervical cancer and are recommended starting at age 21 years.\n
 
 This test detects early signs of cervical changes that could lead to cervical cancer if left untreated. Precancerous changes can be followed up and treated before they become serious.
 
@@ -144,6 +147,9 @@ HPV vaccination can help reduce the risk as well. There are many strains of canc
 
 Invasive cervical cancer and its treatment can have negative effects on your overall health, especially your sexual health.
 
-Also, in many cases it can result in infertility. It’s important to identify cervical changes early and talk with your doctor about them. Taking this step can help prevent the potential for further complications.</string>
+Also, in many cases it can result in infertility. It\’s important to identify cervical changes early and talk with your doctor about them. Taking this step can help prevent the potential for further complications.
+</string>
+
+
 
 </resources>
