@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ImageView BannerIcon;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
