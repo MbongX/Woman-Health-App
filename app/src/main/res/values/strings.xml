@@ -79,7 +79,71 @@ It’s important to note that some STIs can be transmitted during oral sex, incl
         <li>gonorrhea</li>
         <li>chlamydia</li>
     </ul>
-    \n
+    \n</string>
+    <string name = "Prevent_HIV_with_PrEP"><b>PrEP</b>, or pre-exposure prophylaxis, is a prescription medication that’s designed to help prevent contracting HIV during sex without a barrier method or when sharing needles. It’s taken before possible HIV exposure.
+\n
+The most common PrEP pills are available under the brand names <u><strong><i><a href = "https://www.healthline.com/health-news/cost-of-hiv-prevention-drug-discouraging-people-from-doing-prep-therapy">Truvada</a></i></strong></u> and <u><strong><i><a href="https://www.healthline.com/health-news/what-to-know-about-fda-approved-second-prep-drug-for-hiv-prevention">Descovy</a></i></strong></u>.
+\n
+PrEP has side effects, but they usually go away over time. They can include:
+\n
+<ul type = "-">
+<li>headache</li>
+<li>diarrhea</li>
+<li>nausea</li>
+<li>fatigue</li>
+<li>stomach pain</li>
+</ul>
+\n
+<strong>Talk with your doctor about whether PrEP may be a good option for you, especially if:</strong>
+\n
+<ol>
+<li>you plan to have sex without a condom with a partner who has HIV or another STI</li>
+<li>you or your sexual partner share needles</li>
+<li>your sexual partner generally doesn't use barrier methods during sex with you or other partners</li>
+<li>your sexual partner is a penis owner and has sex with other penis owners</li>
+</ol>
+\n
+<strong>Preventive vaccines</strong>
 
+<l><u>Currently, there are three STI vaccines available:</u></l>
+\n
+<ul>
+<li>HPV</li>
+<li>Hepatitis B</li>
+<li>Hepatitis A</li>
+</ul>
+\n
+The three current HPV vaccines approved by the Food and Drug Administration (FDA) are:
+\n
+Cervarix protects against the two strains of HPV that cause most cases of cervical cancer.
+Gardasil protects against those two strains, as well as the two strains that cause the majority of genital warts.
+Gardasil 9 covers the same four HPV strains as Gardasil but includes an additional five “high risk” strains, which is nine strains in total.
+Health insurance generally covers the cost of the vaccines for people up to age 26 years.\n
+The hepatitis B vaccine is normally given during infancy. Hepatitis B causes liver disease. It can be transmitted through sexual activity without a barrier method as well as through blood or blood products.\n
+Hepatitis A is not usually passed from person to person during sex, but it can be transmitted during oral-anal contact.\n
+<i>The hepatitis A vaccine is recommended for all children ages 1 year and older.</i>
     </string>
+    <string name="Get_Screened_for_stis">
+Screening can help reduce the risk of contracting an STI.\n
+Regular STI testing can help reduce the long-term effects of an infection.\n
+Left untreated, bacterial STIs such as gonorrhea and chlamydia can have serious negative effects on your health, including infertility.\n
+<strong>Screening can help prevent these complications.</strong>
+\n
+Make a date with a new partner to get tested before starting a sexual relationship. That way, you’ll each know if you’re putting each other at risk, and treatment can be given if appropriate.
+<b>Note:</b>\n
+<b><u>STI screening is recommended for anyone who’s sexually active.</u></b> STIs can affect individuals of any age or relationship status.
+    </string>
+<string name = "Get_Regular_Pap_smears">
+    <a href = "https://www.healthline.com/health/pap-smear">Pap smears</a> are a routine part of women’s healthcare to check for cervical cancer and are recommended starting at age 21 years.\n
+
+This test detects early signs of cervical changes that could lead to cervical cancer if left untreated. Precancerous changes can be followed up and treated before they become serious.
+
+HPV causes nearly <a href="https://www.who.int/news-room/fact-sheets/detail/human-papillomavirus-(hpv)-and-cervical-cancer">all cases of cervical cancer</a>. Therefore, practicing safer sex can help reduce your risk for cervical cancer.
+
+HPV vaccination can help reduce the risk as well. There are many strains of cancer-causing HPV, which is why vaccination, practicing safer sex, and regular Pap smears are all necessary.
+
+Invasive cervical cancer and its treatment can have negative effects on your overall health, especially your sexual health.
+
+Also, in many cases it can result in infertility. It’s important to identify cervical changes early and talk with your doctor about them. Taking this step can help prevent the potential for further complications.</string>
+
 </resources>
