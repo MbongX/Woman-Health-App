@@ -18,7 +18,7 @@
         android:text="Title"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,30 +34,31 @@
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.131">
 
+        <TextView
+            android:id="@+id/Paraphrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/material_dynamic_tertiary90"
+            android:fontFamily="@font/comfortaa_bold"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:text="@string/Practice_Safe_Sex_Paragraph"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ScrollView"
+            app:layout_constraintVertical_bias="0.0" />
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/Paraphrase"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:lineSpacingExtra="5sp"
-        android:fontFamily="@font/comfortaa_bold"
-        android:padding="15dp"
-        android:background="@color/material_dynamic_tertiary90"
-        android:textColor="@color/black"
-        android:text="@string/Practice_Safe_Sex_Paragraph"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ScrollView"
-        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
