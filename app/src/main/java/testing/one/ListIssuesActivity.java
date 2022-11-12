@@ -69,6 +69,7 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
         {
             case "Practice Safe Sex":
               Intent x = new Intent(this, SafeSex.class);
+              startActivity(x);
         }
     }
 }
