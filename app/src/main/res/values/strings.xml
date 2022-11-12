@@ -150,6 +150,80 @@ Invasive cervical cancer and its treatment can have negative effects on your ove
 Also, in many cases it can result in infertility. It\’s important to identify cervical changes early and talk with your doctor about them. Taking this step can help prevent the potential for further complications.
 </string>
 
+<string name="Endometriosis">
 
+    <b>Endometriosis</b> is a painful condition in which tissue similar to the lining of the uterus grows outside the uterus.\n
+
+The uterus lining is called the endometrium. It\'s the source of blood and tissue during menstruation. It\'s also needed to nourish a growing fetus.\n
+
+When you have endometriosis, endometrium-like tissue deposits onto organs and tissues throughout the abdomen and pelvis. This can be extremely painful.\n
+
+<u><b>Symptoms of endometriosis can include:</b></u>
+\n
+<ul>
+<li>Severe menstrual pain</li>
+<li>Pain during sex</li>
+<li>Pain during bowel movements</li>
+<li>Heavy bleeding</li>
+<li>Bleeding between periods</li>
+<li>Pain from endometriosis can often be treated. Treatment varies according to other health conditions you may have. Sometimes, the treatment depends on your family planning goals.</li>
+</ul>
+\n
+<b><u><i>Treatment options for endometriosis include:</i></u></b>
+\n
+<ul>
+<li>Anti-inflammatory medications</li>
+<li>Hormone therapy</li>
+<li>Surgery to remove the excess tissue</li>
+<li>Hysterectomy (removal of the uterus)</li>
+</ul>
+
+</string>
+
+<string name = "Fibroids">
+    <b>Fibroids</b> are noncancerous tumors in the uterus. Research shows that up to 77 percent of women have fibroids, according to a review published in 2016. <i><u>However, most women will never need treatment.</u></i>
+\n
+Fibroids aren\'t necessarily painful or problematic, and they don\'t increase your risk for cancer. Fibroids may contribute to infertility, but many women are able to become pregnant after treatment for fibroids.
+\n
+If you have fibroids and you become pregnant, your healthcare team will monitor your fibroids. Sometimes they grow during pregnancy and can affect your baby’s movement into the fetal position.
+
+<u><b>Fibroid-related symptoms may include:</b></u>
+<ul>
+<li>Pelvic pain</li>
+<li>Pain during sex</li>
+<li>Heavy or painful menstrual bleeding</li>
+<li>Fertility issues</li>
+</ul>
+\n
+\n
+If treatment for your fibroids becomes necessary, several options are available. Your doctor can help you decide which method is best for you.
+</string>
+
+    <string name="Birth_control">
+        If you\'re someone with a uterus having sex with someone who has sperm, it\'s important to know your options for <i>birth control</i>.
+\n
+This can help empower you and your partner to be able to better manage your family planning decisions related to timing and the size of your family.
+\n
+There are a wide variety of available birth control options. Some methods require a prescription or a minor procedure in the doctor\'s office, and some do not.
+\n
+Birth control options are usually affordable, regardless of your insurance status. The federal Title X Family Planning Program covers all forms of birth control. You can find a Title X family planning clinic near you here.
+\n
+<b><u>Contraceptive options include:</u></b>
+\n
+<ul>
+<li>Male or female condom</li>
+<li>IUD</li>
+<li>Birth control pills</li>
+<li>Hormonal patches or rings</li>
+<li>Birth control shot</li>
+<li>Under-the-skin implant</li>
+<li>Sterilization</li>
+<li>Contraceptive sponge</li>
+<li>Cervical cap</li>
+<li>Diaphragm</li>
+</ul>
+\n\n
+<u><i>Talk with your doctor about which of these options is right for you. Their effectiveness varies greatly and so does the ease of use. Sterilization is considered the most effective method, but it\'s permanent.</i></u>
+    </string>
 
 </resources>
