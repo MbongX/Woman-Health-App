@@ -55,12 +55,20 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
 
     @Override
     public void onIssueClick(int position) {
-        Intent intent = new Intent(this,IssueDetails.class);
+        /*Intent intent = new Intent(this,IssueDetails.class);*/
         String name = issues.get(position).title;
-        intent.putExtra(ISSUE_TITLE,name);
-        intent.putExtra("index",id);
+
+        //intent.putExtra(ISSUE_TITLE,name);
+       // intent.putExtra("index",id);
 
         //intent.putExtra("issueT", String.valueOf(title));
-        startActivity(intent);
+       // startActivity(intent);
+
+        //let's try something out here
+        switch (String.valueOf(title))
+        {
+            case "Practice Safe Sex":
+              Intent x = new Intent(this, SafeSex.class);
+        }
     }
 }
