@@ -3,4 +3,6 @@
     <string name="activity_main_label">Women\'s Health Companion</string>
     <string name="btnBeginString">Begin</string>
     <string name="btnRegister">Register</string>
+    <string name="practice_safe_sex">Practice Safe Sex</string>
+    <string name="menstruation_and_reproductive_health">Menstruation and reproductive health</string>
 </resources>

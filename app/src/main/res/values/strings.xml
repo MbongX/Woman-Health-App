@@ -26,117 +26,154 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <!--Data stores for last activity-->
-    <string name="Practice_Safe_Sex_Paragraph">
+<string name="Practice_Safe_Sex_Paragraph">
         <b><i>Safer sex practices</i></b> often involve <a href="http://mbongxd.jetbrains.space/">using</a> barriers in your body to help prevent you and your partner from sharing bodily fluids. Some of these barrier methods include:
-<ul>
-<li>external condoms</li>
-<li>internal condoms</li>
-<li>dental dams</li>
-<li>gloves</li>
-</ul>
-\n
-These methods have been shown to be <i><b>effective at preventing STIs,</b></i> which are transmitted through bodily fluids such as:\n
-<ul>
-<li>semen</li>
-<li>blood</li>
-<li>vaginal secretions</li>
-<li>saliva</li>
-</ul>
+        \n
+<ol>
+<li>External condoms</li>
     \n
+<li>Internal condoms</li>
+    \n
+<li>Dental dams</li>
+    \n
+<li>Gloves</li>
+
+</ol>
+\n\n
+These methods have been shown to be <i><b>effective at preventing STIs,</b></i> which are transmitted through bodily fluids such as:\n
+\n
+<ul>
+<li>Semen</li>
+    \n
+<li>Blood</li>
+    \n
+<li>Vaginal secretions</li>
+    \n
+<li>Saliva</li>
+</ul>
+    \n\n
 <b>Barrier methods</b> can help protect you and your partner from STIs such as:
     \n
 <ul>
 <li>HIV</li>
-<li>gonorrhea</li>
-<li>chlamydia</li>
-<li>trichomoniasis</li>
-<li>hepatitis A, B, and C</li>
+    \n
+<li>Gonorrhea</li>
+    \n
+<li>Chlamydia</li>
+    \n
+<li>Trichomoniasis</li>
+    \n
+<li>Hepatitis A, B, and C</li>
 </ul>
-\n
+\n\n
 <l>Barrier methods are less effective at preventing STIs that are transmitted through skin-to-skin contact, but they can still help reduce your risk.</l>
+\n
 Examples of <b><i>STIs transmitted via skin-to-skin contact include:</i></b>
 \n
 <ul>
 <li>syphilis</li>
+    \n
 <li>HPV (human papilloma virus)</li>
+    \n
 <li>HSV (herpes simplex virus)</li>
+    \n
 <li>Pubic lice can also be passed from one person to another through this method.</li>
 </ul>
-\n
-When selecting barrier methods, opt for <i>latex or polyurethane condoms and dental dams.</i> And always use them during <b>any kind of sexual contact or penetration</b> to protect you and your partner.
-Using condoms, dental dams, and gloves can help reduce the transmission of STIs during:\n
+\n\n
+When selecting barrier methods, opt for <i><b>latex</b> or <b>condoms</b> and <b>dental dams</b>.
+\n</i>And always use them during <b>any kind of sexual contact or penetration</b> to protect you and your partner.\n
+Using condoms, dental dams, and gloves can help reduce the transmission of STIs during:
+\n\n
 <ul>
 <li>oral sex</li>
+    \n
 <li>vaginal sex</li>
+    \n
 <li>anal sex</li>
 </ul>
+\n\n
+It’s important to note that some STIs can be transmitted during oral sex, including:
 \n
-It’s important to note that some STIs can be transmitted during oral sex, including:\n
 <ul>
 <li>syphilis</li>
+    \n
 <li>HPV</li>
+    \n
 <li>herpes</li>
+    \n
 <li>gonorrhea</li>
+    \n
 <li>chlamydia</li>
 </ul>
+\n\n\n
 </string>
-
-
-    <string name ="Prep"><b>PrEP</b>, or Pre-exposure Prophylaxis, is a prescription medication that\'s designed to help prevent contracting HIV during sex without a barrier method or when sharing needles. It s taken before possible HIV exposure.
+<string name ="Prevent_HIV_With_PrEP"><b>PrEP</b>, or Pre-exposure Prophylaxis, is a prescription medication that\'s designed to help prevent contracting HIV during sex without a barrier method or when sharing needles. It s taken before possible HIV exposure.
 \n
 The most common PrEP pills are available under the brand names <u><b><i><a href = "https://www.healthline.com/health-news/cost-of-hiv-prevention-drug-discouraging-people-from-doing-prep-therapy">Truvada</a></i></b></u> and <u><b><i><a href="https://www.healthline.com/health-news/what-to-know-about-fda-approved-second-prep-drug-for-hiv-prevention">Descovy</a></i></b></u>.
 \n
-PrEP has side effects, but they usually go away over time. They can include:
-\n
+<u><i>PrEP has side effects, but they usually go away over time. They can include:</i></u>
+\n\n
+    <b>
 <ul>
-<li>headache</li>
-<li>diarrhea</li>
-<li>nausea</li>
-<li>fatigue</li>
-<li>stomach pain</li>
+<li>Headache</li>\n
+<li>Diarrhea</li>\n
+<li>Nausea</li>\n
+<li>Fatigue</li>\n
+<li>Stomach pain</li>\n
 </ul>
-\n
-<b>Talk with your doctor about whether PrEP may be a good option for you, especially if:</b>
+    </b>
+\n\n
+    <u><i>Talk with your doctor about whether PrEP may be a good option for you, especially if:</i></u>
 \n
 <ol>
-<li>you plan to have sex without a condom with a partner who has HIV or another STI</li>
-<li>you or your sexual partner share needles</li>
-<li>your sexual partner generally doesn\'t use barrier methods during sex with you or other partners</li>
-<li>your sexual partner is a penis owner and has sex with other penis owners</li>
+<li>You plan to have sex without a condom with a partner who has HIV or another STI</li>\n
+<li>You or your sexual partner share needles</li>\n
+<li>your sexual partner generally doesn\'t use barrier methods during sex with you or other partners</li>\n
+<li>Your sexual partner is a penis owner and has sex with other penis owners</li>\n
 </ol>
-\n
-<b>Preventive vaccines</b>
+\n\n\n
+
+    </string>
+    <string name="Preventive_Vaccine">
+        <b>Preventive vaccines</b>
 
 <l><u>Currently, there are three STI vaccines available:</u></l>
 \n
 <ul>
 <li>HPV</li>
+    \n
 <li>Hepatitis B</li>
+    \n
 <li>Hepatitis A</li>
 </ul>
-\n
+\n\n
 The three current HPV vaccines approved by the Food and Drug Administration (FDA) are:
 \n
-Cervarix protects against the two strains of HPV that cause most cases of cervical cancer. \n
-Gardasil protects against those two strains, as well as the two strains that cause the majority of genital warts. \n
-Gardasil 9 covers the same four HPV strains as Gardasil but includes an additional five "high risk" strains, which is nine strains in total.   \n
-Health insurance generally covers the cost of the vaccines for people up to age 26 years.\n
-The hepatitis B vaccine is normally given during infancy. Hepatitis B causes liver disease. It can be transmitted through sexual activity without a barrier method as well as through blood or blood products.\n
-Hepatitis A is not usually passed from person to person during sex, but it can be transmitted during oral-anal contact.\n
+        <ul>
+        <li>Cervarix protects against the two strains of HPV that cause most cases of cervical cancer.</li>
+            \n
+        <li>Gardasil protects against those two strains, as well as the two strains that cause the majority of genital warts.</li>
+            \n
+        <li>Gardasil 9 covers the same four HPV strains as Gardasil but includes an additional five "high risk" strains, which is nine strains in total.</li>
+        </ul>\n\n
+Health insurance generally covers the cost of the vaccines for people up to age 26 years.
+The hepatitis B vaccine is normally given during infancy. Hepatitis B causes liver disease. It can be transmitted through sexual activity without a barrier method as well as through blood or blood products.
+Hepatitis A is not usually passed from person to person during sex, but it can be transmitted during oral-anal contact.
 <i>The hepatitis A vaccine is recommended for all children ages 1 year and older.</i>
-    </string>
+        \n\n\n
 
-    <string name="Get_Screened_for_stis">
-Screening can help reduce the risk of contracting an STI.\n
-Regular STI testing can help reduce the long-term effects of an infection.\n
+    </string>
+<string name="Get_Screened_for_stis">
+Screening can help reduce the risk of contracting an STI.
+Regular STI testing can help reduce the long-term effects of an infection.
 Left untreated, bacterial STIs such as gonorrhea and chlamydia can have serious negative effects on your health, including infertility.\n
 <b>Screening can help prevent these complications.</b>
-\n
-Make a date with a new partner to get tested before starting a sexual relationship. That way, you\'ll each know if you\’re putting each other at risk, and treatment can be given if appropriate.
-<b>Note:</b>\n
+\n\n
+Make a date with your new partner to get tested before starting a sexual relationship. That way, you\'ll each know if you\’re putting each other at risk, and treatment can be given if appropriate.
+\n\n<b>Note:</b>\n
 <b><u>STI screening is recommended for anyone who\’s sexually active.</u></b> STIs can affect individuals of any age or relationship status.
     </string>
-    <string name = "Get_Regular_Pap_smears">
+<string name = "Get_Regular_Pap_smears">
     <a href = "https://www.healthline.com/health/pap-smear">Pap smears</a> are a routine part of women\’s healthcare to check for cervical cancer and are recommended starting at age 21 years.\n
 
 This test detects early signs of cervical changes that could lead to cervical cancer if left untreated. Precancerous changes can be followed up and treated before they become serious.
@@ -148,82 +185,177 @@ HPV vaccination can help reduce the risk as well. There are many strains of canc
 Invasive cervical cancer and its treatment can have negative effects on your overall health, especially your sexual health.
 
 Also, in many cases it can result in infertility. It\’s important to identify cervical changes early and talk with your doctor about them. Taking this step can help prevent the potential for further complications.
+    \n\n\n
 </string>
+<string name="MenstruAndReproHealth">
 
-<string name="Endometriosis">
-
-    <b>Endometriosis</b> is a painful condition in which tissue similar to the lining of the uterus grows outside the uterus.\n
-
-The uterus lining is called the endometrium. It\'s the source of blood and tissue during menstruation. It\'s also needed to nourish a growing fetus.\n
-
-When you have endometriosis, endometrium-like tissue deposits onto organs and tissues throughout the abdomen and pelvis. This can be extremely painful.\n
-
-<u><b>Symptoms of endometriosis can include:</b></u>
+<b><u>Endometriosis</u></b>\n\n
+Endometriosis is a painful condition in which tissue similar to the lining of the uterus grows outside the uterus. The uterus lining is called the endometrium. It\'s the source of blood and tissue during menstruation. It\'s also needed to nourish a growing fetus.\n
+When you have endometriosis, endometrium-like tissue deposits onto organs and tissues throughout the abdomen and pelvis. This can be extremely painful.
+\n\n
+<i><u>Symptoms of endometriosis can include:</u></i>
 \n
+    <b>
 <ul>
 <li>Severe menstrual pain</li>
+    \n
 <li>Pain during sex</li>
+    \n
 <li>Pain during bowel movements</li>
+    \n
 <li>Heavy bleeding</li>
+    \n
 <li>Bleeding between periods</li>
-<li>Pain from endometriosis can often be treated. Treatment varies according to other health conditions you may have. Sometimes, the treatment depends on your family planning goals.</li>
-</ul>
-\n
-<b><u><i>Treatment options for endometriosis include:</i></u></b>
-\n
+    </ul>
+    </b>
+    \n
+Pain from endometriosis can often be treated. Treatment varies according to other health conditions you may have. Sometimes, the treatment depends on your family planning goals.
+
+\n\n
+<u><i>Treatment options for endometriosis include:</i></u>
+\n<b>
 <ul>
 <li>Anti-inflammatory medications</li>
+    \n
 <li>Hormone therapy</li>
+    \n
 <li>Surgery to remove the excess tissue</li>
+    \n
 <li>Hysterectomy (removal of the uterus)</li>
-</ul>
-
-</string>
-
-<string name = "Fibroids">
-    <b>Fibroids</b> are noncancerous tumors in the uterus. Research shows that up to 77 percent of women have fibroids, according to a review published in 2016. <i><u>However, most women will never need treatment.</u></i>
-\n
+</ul></b>
+\n\n\n
+    <b><u>Fibroids</u></b>\n\n
+Fibroids are noncancerous tumors in the uterus. Research shows that up to 77 percent of women have fibroids, according to a review published in 2016. <i><u>However, most women will never need treatment.</u></i>
 Fibroids aren\'t necessarily painful or problematic, and they don\'t increase your risk for cancer. Fibroids may contribute to infertility, but many women are able to become pregnant after treatment for fibroids.
-\n
 If you have fibroids and you become pregnant, your healthcare team will monitor your fibroids. Sometimes they grow during pregnancy and can affect your baby’s movement into the fetal position.
-
-<u><b>Fibroid-related symptoms may include:</b></u>
+\n\n
+<u><i>Fibroid-related symptoms may include:</i></u>
+    \n
+<b>
 <ul>
 <li>Pelvic pain</li>
+\n
 <li>Pain during sex</li>
+\n
 <li>Heavy or painful menstrual bleeding</li>
+\n
 <li>Fertility issues</li>
 </ul>
+</b>
 \n
 \n
-If treatment for your fibroids becomes necessary, several options are available. Your doctor can help you decide which method is best for you.
-</string>
-
-    <string name="Birth_control">
-        If you\'re someone with a uterus having sex with someone who has sperm, it\'s important to know your options for <i>birth control</i>.
-\n
+    <i>If treatment for your fibroids becomes necessary, several options are available. Your doctor can help you decide which method is best for you.</i>
+\n\n\n
+<b><u><h3>Birth control</h3></u></b>
+\n\n
+If you\'re someone with a uterus having sex with someone who has sperm, it\'s important to know your options for <i>birth control</i>.
 This can help empower you and your partner to be able to better manage your family planning decisions related to timing and the size of your family.
-\n
 There are a wide variety of available birth control options. Some methods require a prescription or a minor procedure in the doctor\'s office, and some do not.
+Birth control options are usually affordable, regardless of your insurance status. The federal Title X Family Planning Program covers all forms of birth control. You can find a Title X family planning clinic near you .
 \n
-Birth control options are usually affordable, regardless of your insurance status. The federal Title X Family Planning Program covers all forms of birth control. You can find a Title X family planning clinic near you here.
+<i><u>Contraceptive options include:</u></i>
 \n
-<b><u>Contraceptive options include:</u></b>
-\n
+<b>
 <ul>
 <li>Male or female condom</li>
+    \n
 <li>IUD</li>
+    \n
 <li>Birth control pills</li>
+    \n
 <li>Hormonal patches or rings</li>
+    \n
 <li>Birth control shot</li>
+    \n
 <li>Under-the-skin implant</li>
+    \n
 <li>Sterilization</li>
+    \n
 <li>Contraceptive sponge</li>
+    \n
 <li>Cervical cap</li>
+    \n
 <li>Diaphragm</li>
 </ul>
+</b>
 \n\n
 <u><i>Talk with your doctor about which of these options is right for you. Their effectiveness varies greatly and so does the ease of use. Sterilization is considered the most effective method, but it\'s permanent.</i></u>
+    \n\n\n
+</string>
+<string name="Lack_of_Interes_in_Sex">
+There are many reasons why someone may have a reduced interest in sex. Possible causes for decreased libido in women include:
+\n
+<b>
+<ul>
+<li>new medication</li>\n
+<li>chronic medical conditions</li>\n
+<li>fatigue</li>\n
+<li>menopause</li>\n
+<li>pregnancy, after delivery period, and breastfeeding</li>\n
+<li>anxiety or depression</li>\n
+<li>stress</li>\n
+<li>relationship concerns</li>
+</ul>
+</b>
+\n\n
+If you\'ve experienced a sudden lack of interest in sex, talk with your doctor. There may be an identifiable cause.
+\n
+Your doctor can help you create a treatment plan for many of these conditions. They can also make a referral to a sex therapist or other therapist for counseling.
+\n
+Couples therapy may be beneficial, too. If you\'re bothered by a decreased sex drive, there are a variety of methods and treatments that can help.
+\n\n\n
+</string>
+<string name="Painful_Sex">
+Sexual intercourse shouldn\'t be painful. If you\'re having pain during sex, talk with your doctor. There are several potential causes of sexual pain.\n
+<u><i>These include:</i></u>
+\n
+<b><ul>
+<li>Infection</li>\n
+<li>Endometriosis</li>\n
+<li>Fibroids</li>\n
+<li>Vaginismus</li>\n
+<li>Vulvodynia</li>\n
+<li>Vaginal dryness</li>\n
+<li>Past negative sexual experiences</li>
+</ul></b>
+\n\n
+Painful sex can be treated in a variety of ways, depending on the cause. When you talk with your doctor about your problem, be prepared to discuss if you have vaginal discharge or other vaginal issues, or pain that occurs:
+\n
+<b><ul>
+<li>During penetration</li>\n
+<li>When touched on the outside of your vulva</li>\n
+<li>After sex</li>\n
+<li>During deep penetration</li>
+</ul></b>
+\n\n
+<u><b>NOTE:</b></u>
+\n
+The details are important. They can help your doctor diagnose underlying problems that may be causing your pain.
+\n\n\n
     </string>
+<string name="Problem_with_Orgasm">
+There\'s a common misconception that all women should be able to orgasm from vaginal intercourse. However, many women need direct clitoral stimulation to climax.
+\n\n
+If you have difficulty reaching orgasm, practice on your own to see what feels good for you. During a shower or bath is a good time for self-exploration.
+\n\n
+According to the American College of Obstetricians and Gynecologists, you might also try the following techniques alone or with a partner:
+\n
+<b><ul>
+<li>Read books about sex and pleasure.</li>\n
+<li>Learn about your body and how it works.</li>\n
+<li>Explore varieties of sexual activity, such as oral sex, touching, and masturbation with and without a partner.</li>\n
+<li>Try sensual nonsexual activities such as massage.</li>\n
+<li>Talk with your partner about what you and they like.</li>\n
+<li>Reduce sources of stress in your life.</li>\n
+<li>Increase sexual stimulation.</li>\n
+<li>Try sexual toys.</li>\n
+<li>Use mental imagery and fantasy.</li>\n
+</ul></b>
+\n\n\n
+It\'s also important to keep communication open between you and your sexual partner. For a better understanding of your sexual health, a sex therapist can be a helpful resource.
+\n\n\n
+</string>
+<string name="practice_safe_sex">Practice Safe Sex</string>
+<string name="menstruation_and_reproductive_health">Menstruation and reproductive health</string>
 
 </resources>
