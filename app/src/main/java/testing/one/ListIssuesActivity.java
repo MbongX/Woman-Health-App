@@ -65,11 +65,52 @@ public class ListIssuesActivity extends AppCompatActivity implements IssueInterf
        // startActivity(intent);
 
         //let's try something out here
-        switch (String.valueOf(title))
+        Intent x;
+        switch (name)
         {
+            //category index:0
             case "Practice Safe Sex":
-              Intent x = new Intent(this, SafeSex.class);
+                x = new Intent(this, SafeSex.class);
               startActivity(x);
+              break;
+            case "Menstruation and Reproduction Health":
+                x = new Intent(this, ManstruAndRepo.class);
+                startActivity(x);
+                break;
+            case "Lack of interest in sex":
+                x = new Intent(this, LackOfInterest.class);
+                startActivity(x);
+                break;
+            case "Painful sex":
+                x = new Intent(this, PainfulSex.class);
+                startActivity(x);
+                break;
+            case "Problems with orgasm":
+                x = new Intent(this, OrgasmProb.class);
+                startActivity(x);
+                break;
+                //category index: 1
+            case "Prevent HIV with PrEP":
+                x = new Intent(this, PreventHIV.class);
+                startActivity(x);
+                break;
+            case "Preventive vaccines":
+                x = new Intent(this, PreventiveVaccines.class);
+                startActivity(x);
+                break;
+            case "Get screened for STIs":
+                x = new Intent(this, GetScreened.class);
+                startActivity(x);
+                break;
+            case "Get regular Pap smears":
+                x = new Intent(this, RegularPapSmear.class);
+                startActivity(x);
+                break;
+                //category index 2
+            case "Emergency contraception":
+                x = new Intent(this,EmergencyPrev.class);
+                startActivity(x);
+                break;
         }
     }
 }

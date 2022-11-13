@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final String Username = username.getText().toString().trim();
                 final String Password = password.getText().toString().trim();
-
+/*
                 //Checking Connectivity
                 if ((isConnected(LoginActivity.this)) == false) {
                     showCustomDialog();
@@ -106,8 +106,9 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                 }
-
-
+*/
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
                 //startActivity(new Intent(LoginActivity.this,HomeActivity.class));
             }
         });
