@@ -37,14 +37,15 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title"
-        app:layout_constraintVertical_bias="0.131">
+        app:layout_constraintVertical_bias="0.131"
+        android:background="@drawable/bb">
 
         <TextView
+            android:background="@drawable/bb"
             android:id="@+id/Paraphrase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:background="@color/material_dynamic_tertiary90"
             android:fontFamily="@font/comfortaa_bold"
             android:lineSpacingExtra="5sp"
             android:padding="15dp"

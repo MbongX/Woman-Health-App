@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegularPapSmear"
-    app:layout_scrollEffect="compress">
-
+    app:layout_scrollEffect="compress"
+    android:background="@drawable/bb">
 
     <LinearLayout
         android:layout_width="match_parent"

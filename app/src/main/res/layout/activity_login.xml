@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="#EC3C5C"
+    android:background="@drawable/bb"
     >
 
 
@@ -108,8 +108,8 @@
 
         <TextView
             android:id="@+id/createAcc_lbl"
-            android:layout_width="169dp"
-            android:layout_height="wrap_content"
+            android:layout_width="178dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/comfortaa_bold"
             android:gravity="center"

@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity implements CategoryInterface
         LogoutIcon.setOnClickListener(View -> {
             Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
             startActivity(intent);
+            finish();
         });
     }
 
