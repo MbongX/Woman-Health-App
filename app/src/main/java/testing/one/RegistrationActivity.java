@@ -79,92 +79,61 @@ public class RegistrationActivity extends AppCompatActivity {
                         Reg_Firstname.setError("Firstname is required");
                         Reg_Firstname.requestFocus();
                         return;
-                    }
-                    if (Lastname.isEmpty()) {
+                    } else if (Lastname.isEmpty()) {
                         Reg_Lastname.setError("Lastname is required");
                         Reg_Lastname.requestFocus();
                         return;
-                    }
-                    if (Email.isEmpty()) {
+                    } else if (Email.isEmpty()) {
                         Reg_Email.setError("Email is required");
                         Reg_Email.requestFocus();
                         return;
-                    }
-                    if (CellNumber.isEmpty()) {
+                    } else if (CellNumber.isEmpty()) {
                         Reg_CellNumber.setError("Cellnumber is required");
                         Reg_CellNumber.requestFocus();
                         return;
-                    }
-                    if (Username.isEmpty()) {
+                    } else if (Username.isEmpty()) {
                         Reg_Username.setError("Username is required");
                         Reg_Username.requestFocus();
                         return;
-                    }
-                    if (Age.isEmpty()) {
+                    } else if (Age.isEmpty()) {
                         Reg_Age.setError("Age is required");
                         Reg_Age.requestFocus();
                         return;
-                    }
-                    if (Password.isEmpty()) {
+                    } else if (Password.isEmpty()) {
                         Reg_Password.setError("Password is required");
                         Reg_Password.requestFocus();
                         return;
-                    }
-                    if (Repeat_Password.isEmpty()) {
+                    } else if (Repeat_Password.isEmpty()) {
                         Reg_RepeatPassword.setError("Repeat Password is required");
                         Reg_RepeatPassword.requestFocus();
                         return;
                     }
-                    //Reg_ErrorMessages.append("Please fill in all the fields");
-                    //Toast.makeText(RegistrationActivity.this,"Please fill in all the fields",Toast.LENGTH_SHORT).show();
 
-
-                    //validating email
-
-                    if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+                    //mail validation
+                    else if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
 
                         Reg_Email.setError("Email format is invalid");
                         Reg_Email.requestFocus();
-                        //Reg_ErrorMessages.append("\nEmail format is invalid");
                         return;
-
-                        //Toast.makeText(RegistrationActivity.this,"Invalid email",Toast.LENGTH_SHORT).show();
                     }
 
                     //validating phone number
 
-                    if (CellNumber.length() != 10) {
+                    else if (CellNumber.length() != 10) {
                         Reg_CellNumber.setError("Cell number must be 10 digits long");
                         Reg_CellNumber.requestFocus();
-                        // Reg_ErrorMessages.append("\nCell number must be 10 digits");
-                        //Toast.makeText(RegistrationActivity.this,"Cell number must have 10 digits",Toast.LENGTH_SHORT).show();
-                    }
-
-
-                    if (ageValue > 100) {
+                    } else if (ageValue > 100) {
                         Reg_Age.setError("Age must not be greater than 100");
                         Reg_Age.requestFocus();
-                        //Reg_ErrorMessages.append("\nAge must be less than 100");
-                        //Toast.makeText(RegistrationActivity.this,"Age cannot be greater than 100",Toast.LENGTH_SHORT).show();
-                    }
-
-
-                    if (!Password.equals(Repeat_Password)) {
+                    } else if (!Password.equals(Repeat_Password)) {
                         Reg_Password.setError("Passwords do not match");
                         Reg_Password.requestFocus();
                         Reg_RepeatPassword.requestFocus();
-
-                        //Reg_ErrorMessages.append("\nPasswords do not match");
-                        //Toast.makeText(RegistrationActivity.this,"Passwords do not match",Toast.LENGTH_SHORT).show();
-                    }
-                    if ((Password.equals(Repeat_Password)) && Password.length() < 8) {
+                    } else if ((Password.equals(Repeat_Password)) && Password.length() < 8) {
                         Reg_Password.setError("Password must be more han 8 characters in length");
                         Reg_Password.requestFocus();
                         Reg_RepeatPassword.requestFocus();
-                        //Reg_ErrorMessages.append("\nPassword must be greater than 8 characters");
-                        //Toast.makeText(RegistrationActivity.this,"Password cannot be less than 8 characters",Toast.LENGTH_SHORT).show();
                     }
-                    //Toast.makeText(RegistrationActivity.this,Reg_ErrorMessages.getText().toString(),Toast.LENGTH_SHORT).show();
                 } else {
 
                     databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {

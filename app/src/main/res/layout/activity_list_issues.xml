@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E91E63"
-    tools:context=".ListIssuesActivity">
+    tools:context=".ListIssuesActivity"
+    android:background="@drawable/bb">
 
     <TextView
         android:id="@+id/issueListTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textAlignment="center"
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
@@ -24,12 +26,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/issuesRecyclerView"
         android:layout_width="353dp"
-        android:layout_height="633dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/issueListTitle"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.116" />
 </androidx.constraintlayout.widget.ConstraintLayout>

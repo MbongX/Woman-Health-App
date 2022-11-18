@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         BannerIcon.setOnClickListener(View -> {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final String Username = username.getText().toString().trim();
                 final String Password = password.getText().toString().trim();
-/*
+
                 //Checking Connectivity
                 if ((isConnected(LoginActivity.this)) == false) {
                     showCustomDialog();
@@ -66,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                             username.requestFocus();
                             return;
                         }
-                        if (Password.isEmpty()) {
+                        else if (Password.isEmpty()) {
                             password.setError("Password is required");
                             password.requestFocus();
                             return;
@@ -106,16 +107,14 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                 }
-*/
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-                //startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+
             }
         });
 
         createAccount.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
             startActivity(intent);
+            finish();
         });
 
     }
@@ -129,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //redirecting the user to setting->WiFi
-                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -149,6 +148,7 @@ public class LoginActivity extends AppCompatActivity {
         NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         //Mobile Connectivity
         NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
 
         return wifiConn != null && wifiConn.isConnected() || (mobileConn != null && mobileConn.isConnected());
     }

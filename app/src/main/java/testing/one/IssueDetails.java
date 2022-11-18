@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class IssueDetails extends AppCompatActivity {
 TextView title,paragragh;
-String prac_sex = "@strings/Practice_Safe_Sex_Paragraph";
+
     public static final String ISSUE_TITLE = "testing.one.ISSUE_TITLE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
